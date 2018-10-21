@@ -4,7 +4,7 @@ using namespace std;
 		// structure for link list
 struct node 
 {
-	char digit;		// Variable for storing status of seat
+	char digit;		// Variable for storing bit
 	struct node *next;	//pointer for pointing next node
 	struct node *prev;	//pointer for pointing previous node
 };
@@ -14,10 +14,10 @@ class binary
 	struct node *nn;	// pointer to point newly created node
 	public:
 	struct node *header;
-	char buffer[1024];
+	char buffer[1024];	// for clering i/o buffer
 	// header pointer 
 		/* CONSTRUCTOR*/
-/* Here we have created all the 7 seats using linklist for respective object of class*/
+
 	binary()	
 	{
 		header=NULL;
@@ -62,7 +62,7 @@ class binary
 			delete(nn);
 			cout<<"\nNUMBER ACCEPTED\n";
 		}
-		setvbuf(stdin, buffer, _IOFBF, 1024);
+		setvbuf(stdin, buffer, _IOFBF, 1024);			// for clering i/o buffer
 	}
 	
 	
